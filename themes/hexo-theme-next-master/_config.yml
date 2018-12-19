@@ -58,9 +58,9 @@ footer:
 
   theme:
     # Theme & scheme info link (Theme - NexT.scheme).
-    enable: true
+    # enable: true
     # Version info of NexT after scheme info (vX.X.X).
-    version: true
+    # version: true
   # -------------------------------------------------------------
   # Any custom text can be defined here.
   #custom_text: Hosted by <a target="_blank" href="https://pages.github.com">GitHub Pages</a>
@@ -100,6 +100,10 @@ menu:
   #schedule: /schedule/ || calendar
   #sitemap: /sitemap.xml || sitemap
   #commonweal: /404/ || heartbeat
+
+sitemap:
+  path: sitemap.xml
+
 
 # Enable/Disable menu icons.
 menu_icons:
@@ -230,8 +234,8 @@ post_meta:
 # Dependencies: https://github.com/willin/hexo-wordcount
 post_wordcount:
   item_text: true
-  wordcount: false
-  min2read: false
+  wordcount: true
+  min2read: true
   totalcount: false
   separated_meta: true
 
@@ -531,9 +535,9 @@ rating:
 # Show number of visitors to each article.
 # You can visit https://leancloud.cn get AppID and AppKey.
 leancloud_visitors:
-  enable: false
-  app_id: #<app_id>
-  app_key: #<app_key>
+  enable: true
+  app_id: PE90x5npdOD8peUmz7NNljqn-gzGzoHsz
+  app_key: qoQeuw13U8VyXRnMw5tQXsYt
 
 # Another tool to show number of visitors to each article.
 # visit https://console.firebase.google.com/u/0/ to get apiKey and projectId
@@ -600,6 +604,12 @@ algolia_search:
     input_placeholder: Search for Posts
     hits_empty: "We didn't find any results for the search: ${query}"
     hits_stats: "${hits} results found in ${time} ms"
+
+search:
+  path: search.xml
+  field: post
+  format: html
+  limit: 10000
 
 # Local search
 # Dependencies: https://github.com/flashlab/hexo-generator-search
@@ -675,7 +685,7 @@ motion:
 fancybox: true
 
 # Progress bar in the top during page loading.
-pace: false
+pace: true
 # Themes list:
 #pace-theme-big-counter
 #pace-theme-bounce
@@ -811,6 +821,10 @@ passage_end_tag:
 css: css
 js: js
 images: images
+
+# Online contact
+daovoice: true
+daovoice_app_id: 31e1cf45
 
 # Theme version
 version: 5.1.4
